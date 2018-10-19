@@ -1,0 +1,14 @@
+/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1/chapter1-webapi.deps.json
+/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1/chapter1-webapi.runtimeconfig.json
+/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1/chapter1-webapi.runtimeconfig.dev.json
+/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1/chapter1-webapi.dll
+/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1/chapter1-webapi.pdb
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.csprojAssemblyReference.cache
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.csproj.CoreCompileInputs.cache
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.RazorAssemblyInfo.cache
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.RazorAssemblyInfo.cs
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.AssemblyInfoInputs.cache
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.AssemblyInfo.cs
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.RazorTargetAssemblyInfo.cache
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.dll
+/home/daijinming/demo/chapter1-webapi/obj/Debug/netcoreapp2.1/chapter1-webapi.pdb

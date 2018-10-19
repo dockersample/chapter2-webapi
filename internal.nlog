@@ -1,0 +1,302 @@
+2018-10-19 11:37:04.6039 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2018-10-19 11:37:04.6517 Debug Found assembly location directory: '/home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2018-10-19 11:37:04.6542 Debug Search for auto loading files in location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:37:04.6586 Debug Found assembly location directory: '/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1' (chapter1-webapi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2018-10-19 11:37:04.6586 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:37:04.6586 Debug Auto loading based on AppDomain-BaseDirectory found location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:37:04.6586 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:37:04.6586 Debug Start auto loading, location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:37:04.6586 Debug Auto loading done
+2018-10-19 11:37:04.6611 Info Message Template Auto Format enabled
+2018-10-19 11:37:04.6670 Info Loading assembly: NLog.StructuredLogging.Json
+2018-10-19 11:37:04.6670 Debug ScanAssembly('NLog.StructuredLogging.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')
+2018-10-19 11:37:04.6839 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:37:04.6977 Debug Setting 'ConsoleTarget.name' to 'console'
+2018-10-19 11:37:04.6977 Debug Setting 'ConsoleTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:37:04.6977 Info Adding target Console Target[console]
+2018-10-19 11:37:04.6977 Debug Registered target console: NLog.Targets.ConsoleTarget
+2018-10-19 11:37:04.7020 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:37:04.7020 Debug Setting 'NetworkTarget.name' to 'logstash'
+2018-10-19 11:37:04.7020 Debug Setting 'NetworkTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:37:04.7020 Debug Setting 'NetworkTarget.address' to 'http://127.0.0.1:5044'
+2018-10-19 11:37:04.7020 Info Adding target Network Target[logstash]
+2018-10-19 11:37:04.7020 Debug Registered target logstash: NLog.Targets.NetworkTarget
+2018-10-19 11:37:04.7106 Info Configured from an XML element in nlog.config...
+2018-10-19 11:37:04.7161 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2018-10-19 11:37:04.7222 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2018-10-19 11:37:04.7222 Debug --- NLog configuration dump ---
+2018-10-19 11:37:04.7222 Debug Targets:
+2018-10-19 11:37:04.7222 Debug Console Target[console]
+2018-10-19 11:37:04.7222 Debug Network Target[logstash]
+2018-10-19 11:37:04.7222 Debug Rules:
+2018-10-19 11:37:04.7269 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ logstash ]
+2018-10-19 11:37:04.7269 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ console ]
+2018-10-19 11:37:04.7269 Debug --- End of NLog configuration dump ---
+2018-10-19 11:37:04.7328 Info Found 10 configuration items
+2018-10-19 11:37:04.7516 Debug Watching path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config' for changes.
+2018-10-19 11:37:04.7588 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 11:37:04.7588 Debug Trace => logstash console
+2018-10-19 11:37:04.7588 Debug Debug => logstash console
+2018-10-19 11:37:04.7588 Debug Info => logstash console
+2018-10-19 11:37:04.7588 Debug Warn => logstash console
+2018-10-19 11:37:04.7588 Debug Error => logstash console
+2018-10-19 11:37:04.7588 Debug Fatal => logstash console
+2018-10-19 11:37:05.0133 Error NetworkTarget(Name=logstash): Error when sending. Exception: System.Net.WebException: Connection refused Connection refused ---> System.Net.Http.HttpRequestException: Connection refused ---> System.Net.Sockets.SocketException: Connection refused
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at NLog.Internal.NetworkSenders.HttpNetworkSender.<>c__DisplayClass2_0.<DoSend>b__0(IAsyncResult r)
+2018-10-19 11:42:24.6942 Info Shutting down logging...
+2018-10-19 11:42:24.7001 Debug Stopping file watching for path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config'
+2018-10-19 11:42:24.7042 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 11:42:24.7042 Debug Trace =>
+2018-10-19 11:42:24.7042 Debug Debug =>
+2018-10-19 11:42:24.7042 Debug Info =>
+2018-10-19 11:42:24.7042 Debug Warn =>
+2018-10-19 11:42:24.7042 Debug Error =>
+2018-10-19 11:42:24.7042 Debug Fatal =>
+2018-10-19 11:42:24.7060 Debug Closing logging configuration...
+2018-10-19 11:42:24.7060 Debug Closing target 'Network Target[logstash]'.
+2018-10-19 11:42:24.7117 Debug Closed target 'Network Target[logstash]'.
+2018-10-19 11:42:24.7117 Debug Closing target 'Console Target[console]'.
+2018-10-19 11:42:24.7138 Debug Closed target 'Console Target[console]'.
+2018-10-19 11:42:24.7138 Debug Finished closing logging configuration.
+2018-10-19 11:42:24.7138 Info Logger has been shut down.
+2018-10-19 11:42:26.1026 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2018-10-19 11:42:26.1306 Debug Found assembly location directory: '/home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2018-10-19 11:42:26.1306 Debug Search for auto loading files in location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:42:26.1366 Debug Found assembly location directory: '/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1' (chapter1-webapi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2018-10-19 11:42:26.1366 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:42:26.1366 Debug Auto loading based on AppDomain-BaseDirectory found location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:42:26.1366 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:42:26.1372 Debug Start auto loading, location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:42:26.1372 Debug Auto loading done
+2018-10-19 11:42:26.1372 Info Message Template Auto Format enabled
+2018-10-19 11:42:26.1438 Info Loading assembly: NLog.StructuredLogging.Json
+2018-10-19 11:42:26.1438 Debug ScanAssembly('NLog.StructuredLogging.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')
+2018-10-19 11:42:26.1609 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:42:26.1725 Debug Setting 'ConsoleTarget.name' to 'console'
+2018-10-19 11:42:26.1725 Debug Setting 'ConsoleTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:42:26.1737 Info Adding target Console Target[console]
+2018-10-19 11:42:26.1737 Debug Registered target console: NLog.Targets.ConsoleTarget
+2018-10-19 11:42:26.1737 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:42:26.1737 Debug Setting 'NetworkTarget.name' to 'logstash'
+2018-10-19 11:42:26.1737 Debug Setting 'NetworkTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:42:26.1737 Debug Setting 'NetworkTarget.address' to 'http://127.0.0.1:5044'
+2018-10-19 11:42:26.1737 Info Adding target Network Target[logstash]
+2018-10-19 11:42:26.1737 Debug Registered target logstash: NLog.Targets.NetworkTarget
+2018-10-19 11:42:26.1839 Info Configured from an XML element in nlog.config...
+2018-10-19 11:42:26.1887 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2018-10-19 11:42:26.1944 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2018-10-19 11:42:26.1944 Debug --- NLog configuration dump ---
+2018-10-19 11:42:26.1944 Debug Targets:
+2018-10-19 11:42:26.1944 Debug Console Target[console]
+2018-10-19 11:42:26.1944 Debug Network Target[logstash]
+2018-10-19 11:42:26.1944 Debug Rules:
+2018-10-19 11:42:26.1981 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ logstash ]
+2018-10-19 11:42:26.1981 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ console ]
+2018-10-19 11:42:26.1981 Debug --- End of NLog configuration dump ---
+2018-10-19 11:42:26.2036 Info Found 10 configuration items
+2018-10-19 11:42:26.2218 Debug Watching path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config' for changes.
+2018-10-19 11:42:26.2284 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 11:42:26.2284 Debug Trace => logstash console
+2018-10-19 11:42:26.2284 Debug Debug => logstash console
+2018-10-19 11:42:26.2284 Debug Info => logstash console
+2018-10-19 11:42:26.2284 Debug Warn => logstash console
+2018-10-19 11:42:26.2284 Debug Error => logstash console
+2018-10-19 11:42:26.2284 Debug Fatal => logstash console
+2018-10-19 11:42:26.4022 Error NetworkTarget(Name=logstash): Error when sending. Exception: System.Net.WebException: Connection refused Connection refused ---> System.Net.Http.HttpRequestException: Connection refused ---> System.Net.Sockets.SocketException: Connection refused
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at NLog.Internal.NetworkSenders.HttpNetworkSender.<>c__DisplayClass2_0.<DoSend>b__0(IAsyncResult r)
+2018-10-19 11:42:44.5043 Info Shutting down logging...
+2018-10-19 11:42:44.5134 Debug Stopping file watching for path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config'
+2018-10-19 11:42:44.5134 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 11:42:44.5134 Debug Trace =>
+2018-10-19 11:42:44.5134 Debug Debug =>
+2018-10-19 11:42:44.5134 Debug Info =>
+2018-10-19 11:42:44.5134 Debug Warn =>
+2018-10-19 11:42:44.5134 Debug Error =>
+2018-10-19 11:42:44.5134 Debug Fatal =>
+2018-10-19 11:42:44.5181 Debug Closing logging configuration...
+2018-10-19 11:42:44.5181 Debug Closing target 'Network Target[logstash]'.
+2018-10-19 11:42:44.5181 Debug Closed target 'Network Target[logstash]'.
+2018-10-19 11:42:44.5215 Debug Closing target 'Console Target[console]'.
+2018-10-19 11:42:44.5215 Debug Closed target 'Console Target[console]'.
+2018-10-19 11:42:44.5215 Debug Finished closing logging configuration.
+2018-10-19 11:42:44.5215 Info Logger has been shut down.
+2018-10-19 11:45:00.8785 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2018-10-19 11:45:00.9078 Debug Found assembly location directory: '/home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2018-10-19 11:45:00.9097 Debug Search for auto loading files in location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:45:00.9138 Debug Found assembly location directory: '/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1' (chapter1-webapi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2018-10-19 11:45:00.9138 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:45:00.9138 Debug Auto loading based on AppDomain-BaseDirectory found location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:45:00.9138 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 11:45:00.9138 Debug Start auto loading, location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 11:45:00.9138 Debug Auto loading done
+2018-10-19 11:45:00.9138 Info Message Template Auto Format enabled
+2018-10-19 11:45:00.9214 Info Loading assembly: NLog.StructuredLogging.Json
+2018-10-19 11:45:00.9214 Debug ScanAssembly('NLog.StructuredLogging.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')
+2018-10-19 11:45:00.9402 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:45:00.9522 Debug Setting 'ConsoleTarget.name' to 'console'
+2018-10-19 11:45:00.9522 Debug Setting 'ConsoleTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:45:00.9534 Info Adding target Console Target[console]
+2018-10-19 11:45:00.9534 Debug Registered target console: NLog.Targets.ConsoleTarget
+2018-10-19 11:45:00.9534 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 11:45:00.9534 Debug Setting 'NetworkTarget.name' to 'logstash'
+2018-10-19 11:45:00.9534 Debug Setting 'NetworkTarget.layout' to '${structuredlogging.json}'
+2018-10-19 11:45:00.9534 Debug Setting 'NetworkTarget.address' to 'http://127.0.0.1:5044'
+2018-10-19 11:45:00.9534 Info Adding target Network Target[logstash]
+2018-10-19 11:45:00.9534 Debug Registered target logstash: NLog.Targets.NetworkTarget
+2018-10-19 11:45:00.9640 Info Configured from an XML element in nlog.config...
+2018-10-19 11:45:00.9690 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2018-10-19 11:45:00.9750 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2018-10-19 11:45:00.9750 Debug --- NLog configuration dump ---
+2018-10-19 11:45:00.9771 Debug Targets:
+2018-10-19 11:45:00.9771 Debug Console Target[console]
+2018-10-19 11:45:00.9771 Debug Network Target[logstash]
+2018-10-19 11:45:00.9771 Debug Rules:
+2018-10-19 11:45:00.9771 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ logstash ]
+2018-10-19 11:45:00.9771 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ console ]
+2018-10-19 11:45:00.9771 Debug --- End of NLog configuration dump ---
+2018-10-19 11:45:00.9844 Info Found 10 configuration items
+2018-10-19 11:45:01.0033 Debug Watching path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config' for changes.
+2018-10-19 11:45:01.0097 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 11:45:01.0097 Debug Trace => logstash console
+2018-10-19 11:45:01.0097 Debug Debug => logstash console
+2018-10-19 11:45:01.0097 Debug Info => logstash console
+2018-10-19 11:45:01.0097 Debug Warn => logstash console
+2018-10-19 11:45:01.0097 Debug Error => logstash console
+2018-10-19 11:45:01.0097 Debug Fatal => logstash console
+2018-10-19 11:45:01.1852 Error NetworkTarget(Name=logstash): Error when sending. Exception: System.Net.WebException: Connection refused Connection refused ---> System.Net.Http.HttpRequestException: Connection refused ---> System.Net.Sockets.SocketException: Connection refused
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.CreateConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.WaitForCreatedConnectionAsync(ValueTask`1 creationTask)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at NLog.Internal.NetworkSenders.HttpNetworkSender.<>c__DisplayClass2_0.<DoSend>b__0(IAsyncResult r)
+2018-10-19 13:36:35.0188 Info Shutting down logging...
+2018-10-19 13:36:35.0247 Debug Stopping file watching for path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config'
+2018-10-19 13:36:35.0298 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 13:36:35.0298 Debug Trace =>
+2018-10-19 13:36:35.0298 Debug Debug =>
+2018-10-19 13:36:35.0298 Debug Info =>
+2018-10-19 13:36:35.0298 Debug Warn =>
+2018-10-19 13:36:35.0298 Debug Error =>
+2018-10-19 13:36:35.0298 Debug Fatal =>
+2018-10-19 13:36:35.0298 Debug Closing logging configuration...
+2018-10-19 13:36:35.0298 Debug Closing target 'Network Target[logstash]'.
+2018-10-19 13:36:35.0354 Debug Closed target 'Network Target[logstash]'.
+2018-10-19 13:36:35.0354 Debug Closing target 'Console Target[console]'.
+2018-10-19 13:36:35.0354 Debug Closed target 'Console Target[console]'.
+2018-10-19 13:36:35.0354 Debug Finished closing logging configuration.
+2018-10-19 13:36:35.0354 Info Logger has been shut down.
+2018-10-19 13:49:38.9164 Debug ScanAssembly('NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c')
+2018-10-19 13:49:38.9663 Debug Found assembly location directory: '/home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0' (NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c)
+2018-10-19 13:49:38.9663 Debug Search for auto loading files in location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 13:49:38.9729 Debug Found assembly location directory: '/home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1' (chapter1-webapi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)
+2018-10-19 13:49:38.9729 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 13:49:38.9729 Debug Auto loading based on AppDomain-BaseDirectory found location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 13:49:38.9729 Debug Search for auto loading files in location: /home/daijinming/demo/chapter1-webapi/bin/Debug/netcoreapp2.1
+2018-10-19 13:49:38.9729 Debug Start auto loading, location: /home/daijinming/.nuget/packages/nlog/4.5.10/lib/netstandard2.0
+2018-10-19 13:49:38.9741 Debug Auto loading done
+2018-10-19 13:49:38.9741 Info Message Template Auto Format enabled
+2018-10-19 13:49:38.9801 Info Loading assembly: NLog.StructuredLogging.Json
+2018-10-19 13:49:38.9801 Debug ScanAssembly('NLog.StructuredLogging.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null')
+2018-10-19 13:49:39.0000 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 13:49:39.0166 Debug Setting 'ConsoleTarget.name' to 'console'
+2018-10-19 13:49:39.0166 Debug Setting 'ConsoleTarget.layout' to '${structuredlogging.json}'
+2018-10-19 13:49:39.0177 Info Adding target Console Target[console]
+2018-10-19 13:49:39.0177 Debug Registered target console: NLog.Targets.ConsoleTarget
+2018-10-19 13:49:39.0177 Debug Setting 'UppercaseLayoutRendererWrapper.uppercase' to 'true'
+2018-10-19 13:49:39.0177 Debug Setting 'NetworkTarget.name' to 'logstash'
+2018-10-19 13:49:39.0177 Debug Setting 'NetworkTarget.layout' to '${structuredlogging.json}'
+2018-10-19 13:49:39.0177 Debug Setting 'NetworkTarget.address' to 'http://127.0.0.1:5044'
+2018-10-19 13:49:39.0177 Info Adding target Network Target[logstash]
+2018-10-19 13:49:39.0177 Debug Registered target logstash: NLog.Targets.NetworkTarget
+2018-10-19 13:49:39.0290 Info Configured from an XML element in nlog.config...
+2018-10-19 13:49:39.0342 Debug Unused target checking is started... Rule Count: 2, Target Count: 2
+2018-10-19 13:49:39.0400 Debug Unused target checking is completed. Total Rule Count: 2, Total Target Count: 2, Unused Target Count: 0
+2018-10-19 13:49:39.0422 Debug --- NLog configuration dump ---
+2018-10-19 13:49:39.0422 Debug Targets:
+2018-10-19 13:49:39.0422 Debug Console Target[console]
+2018-10-19 13:49:39.0422 Debug Network Target[logstash]
+2018-10-19 13:49:39.0422 Debug Rules:
+2018-10-19 13:49:39.0422 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ logstash ]
+2018-10-19 13:49:39.0422 Debug logNamePattern: (:All) levels: [ Trace Debug Info Warn Error Fatal ] appendTo: [ console ]
+2018-10-19 13:49:39.0422 Debug --- End of NLog configuration dump ---
+2018-10-19 13:49:39.0495 Info Found 10 configuration items
+2018-10-19 13:49:39.0677 Debug Watching path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config' for changes.
+2018-10-19 13:49:39.0745 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 13:49:39.0745 Debug Trace => logstash console
+2018-10-19 13:49:39.0745 Debug Debug => logstash console
+2018-10-19 13:49:39.0745 Debug Info => logstash console
+2018-10-19 13:49:39.0745 Debug Warn => logstash console
+2018-10-19 13:49:39.0745 Debug Error => logstash console
+2018-10-19 13:49:39.0745 Debug Fatal => logstash console
+2018-10-19 13:49:39.3501 Error NetworkTarget(Name=logstash): Error when sending. Exception: System.Net.WebException: An error occurred while sending the request. The server returned an invalid or unrecognized response. ---> System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.IO.IOException: The server returned an invalid or unrecognized response.
+   at System.Net.Http.HttpConnection.FillAsync()
+   at System.Net.Http.HttpConnection.ReadNextResponseHeaderLineAsync(Boolean foldedHeadersAllowed)
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithNtConnectionAuthAsync(HttpConnection connection, HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncUnbuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at System.Net.HttpWebRequest.SendRequest()
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   at NLog.Internal.NetworkSenders.HttpNetworkSender.<>c__DisplayClass2_0.<DoSend>b__0(IAsyncResult r)
+2018-10-19 13:58:32.3132 Info Shutting down logging...
+2018-10-19 13:58:32.3214 Debug Stopping file watching for path '/home/daijinming/demo/chapter1-webapi' filter 'nlog.config'
+2018-10-19 13:58:32.3283 Debug Targets for chapter1_webapi.Program by level:
+2018-10-19 13:58:32.3283 Debug Trace =>
+2018-10-19 13:58:32.3283 Debug Debug =>
+2018-10-19 13:58:32.3283 Debug Info =>
+2018-10-19 13:58:32.3283 Debug Warn =>
+2018-10-19 13:58:32.3283 Debug Error =>
+2018-10-19 13:58:32.3297 Debug Fatal =>
+2018-10-19 13:58:32.3297 Debug Closing logging configuration...
+2018-10-19 13:58:32.3297 Debug Closing target 'Network Target[logstash]'.
+2018-10-19 13:58:32.3337 Debug Closed target 'Network Target[logstash]'.
+2018-10-19 13:58:32.3337 Debug Closing target 'Console Target[console]'.
+2018-10-19 13:58:32.3337 Debug Closed target 'Console Target[console]'.
+2018-10-19 13:58:32.3337 Debug Finished closing logging configuration.
+2018-10-19 13:58:32.3337 Info Logger has been shut down.
